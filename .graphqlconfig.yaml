@@ -1,0 +1,10 @@
+{
+  "schemaPath": "schema.graphql",
+  "includes": ["*.graphql"],
+  "excludes": ["temp/**"],
+  "extensions": {
+    "endpoints": {
+      "dev": "https://graphql.anilist.co"
+    }
+  }
+}

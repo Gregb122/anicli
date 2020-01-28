@@ -1,0 +1,17 @@
+query UnionQuery ($userName: String) { # Define which variables will be used in the query (id)
+  MediaListCollection(userName: $userName, type: ANIME, status: CURRENT) { # Insert our variables into the query arguments (id) (type: ANIME is hard-coded in the query)
+    lists {
+      entries {
+        media {
+          title {
+            romaji
+          }
+          nextAiringEpisode{
+            airingAt
+            episode
+          }
+        }
+      }
+    }
+  }
+}

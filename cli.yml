@@ -1,0 +1,53 @@
+name: anicli
+version: "v1.0-alpha"
+author: Grzegorz Bielecki <grzegorz.bielecki9@gmail.com>
+about: Unofficial anilist.co cli client.
+args:
+
+
+subcommands:
+    - list:
+        about: Display user animelist
+        args:
+            - user:
+                short: u
+                help: User's list
+                index: 1
+                required: true
+
+            - watching:
+                short: w
+                help: Slice of list with watching status
+
+            - completed:
+                short: c
+                help: Slice of list with completed status
+
+            - paused:
+                help: Slice of list with paused status
+
+            - dropped:
+                help: Slice of list with dropped status
+
+            - planning: 
+                help: Slice of list with planning status
+
+    - favorite:
+        about: Display favorite list
+        args:
+            - user:
+                short: u
+                help: User's list
+                index: 1
+
+            - genres:
+                short: g
+                help: Display favorite genres
+
+            - titles:
+                short: t
+                help: Display favorite titles
+
+            - HEAD:
+                help: Number of favorite titles to display
+                required: true
